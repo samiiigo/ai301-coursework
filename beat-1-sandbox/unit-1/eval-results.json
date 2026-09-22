@@ -1,0 +1,810 @@
+{
+  "rubric": "C:\\Users\\samyo\\.claude\\skills\\issue-select\\rubric.md",
+  "model": "sonnet",
+  "agreement": [
+    18,
+    20
+  ],
+  "results": [
+    {
+      "id": "issue-01",
+      "verdict": "accept",
+      "failed_checks": [
+        "Maintainer guidance"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits (all 2026-08-04) are human-authored (codewithdaniel1, danyeaw), within 90 days of 2026-08-05 capture"
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push 2026-08-04 and latest release 26.7.0 (2026-07-31), both within 180 days of capture"
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Coordinated edits (new task page + updates to manage-pkgs.rst, pip-interoperability.rst, new-features.md) all describe one feature (conda-pypi GA workflow), no independently-scoped subprojects or core architecture change"
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "assignees: none; linked PRs: none; Comments (0 total, first 0 shown)"
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "CONTRIBUTING.md 'Generative AI' section: generative AI tools welcome; contributor responsible for all contributions and must review/understand AI-generated content"
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "fail",
+          "evidence": "labels: type::documentation only (no good-first-issue); issue opened by CONTRIBUTOR dashagurova with 0 comments, so no maintainer comment identifies the change"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-02",
+      "verdict": "reject",
+      "failed_checks": [
+        "Maintainer activity",
+        "Repository in use",
+        "Maintainer guidance"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "fail",
+          "evidence": "Last default-branch commit is 2023-12-09 and all 5 sampled recent issues (#351, #347, #345, #331, #292) show 'no maintainer comment in thread' \u2014 no human maintainer activity within 90 days of the 2026-08-05 capture."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "fail",
+          "evidence": "Last push to any branch 2024-06-19 and latest release 2023-12-09 \u2014 both far beyond 180 days before the 2026-08-05 capture date."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Single identifiable bug fix: BSD sed -i needs an explicit backup-suffix arg; concrete portable fix proposed in the issue body."
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "No assignees, no linked PRs; the two comments are a spam auto-reply and a note about an unrelated third-party fork, not a claim on this issue."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "Repo facts: 'no CONTRIBUTING.md in the repo; no stated policy' \u2014 unstated policy passes."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "fail",
+          "evidence": "Issue has no labels, and neither comment is from a maintainer identifying the fix, file, or verification step."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-03",
+      "verdict": "reject",
+      "failed_checks": [
+        "Bounded contribution",
+        "Available to work"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Human-authored default-branch commits by Pierre-Sassoulas/Guflly/davidpavlovschi on 2026-08-02/03, within 90 days of 2026-08-05 capture."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push to any branch 2026-08-03, within 180 days of capture."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "fail",
+          "evidence": "Issue opened 2023-10-12 (~1030 days old, >730) with 3 closed unmerged linked PRs (#10987, #11001, #11008), matching the rubric's reject condition for old issues with \u22652 closed unmerged attempts."
+        },
+        {
+          "name": "Available to work",
+          "grade": "fail",
+          "evidence": "Linked PR #10985 is open and explicitly endorsed by COLLABORATOR DanielNoord: 'We are not looking for any other contributions other than @hamza-mobeen's PR: pylint-dev/pylint#10985.'"
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "CONTRIBUTING.md has no statement on AI/contribution tooling \u2014 explicitly unstated policy passes."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "pass",
+          "evidence": "Labels 'Good first issue'/'Help wanted' plus COLLABORATOR comment naming the intended PR (#10985)."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-04",
+      "verdict": "accept",
+      "failed_checks": [],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits authored by RazinShaikh/96-LB dated 2026-08-04, 1 day before capture."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push to any branch 2026-08-04, within 180 days of capture."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Issue names a defined set of rules missing previews ('remove identity, fuse spiders, remove self loops, etc.') \u2014 one identifiable small feature/bug fix, no umbrella/tracking language."
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "assignees: none; linked PRs: none; 0 comments (no claims)."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "CONTRIBUTING.md has no statement on AI or contribution tooling \u2014 no policy found, passes per rubric."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "pass",
+          "evidence": "Issue has 'good first issue' label and is opened by COLLABORATOR RazinShaikh naming specific target rules."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-05",
+      "verdict": "reject",
+      "failed_checks": [
+        "Bounded contribution",
+        "Available to work"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits (2026-07-31 to 2026-08-04) are human-authored by asmeurer, oscarbenjamin, moorepants, Upabjojr."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push 2026-08-04, one day before the 2026-08-05 capture."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "fail",
+          "evidence": "Issue is an open-ended, ongoing invitation to add type annotations 'anywhere in the codebase' with 12 linked PRs across independent files (digits.py, memoization.py, iterables.py, exceptions.py, expr.py, transforms.py, generate.py) \u2014 an umbrella issue with independently scoped subprojects, not one identifiable fix."
+        },
+        {
+          "name": "Available to work",
+          "grade": "unclear",
+          "evidence": "Only 40 of 106 comments shown (latest dated 2025-12-30, ~7 months before capture), so no visibility into claims/PRs near the capture date, and the umbrella framing means there is no single 'requested fix' to check availability against."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "CONTRIBUTING.md has no statement on AI or contribution tooling \u2014 an explicitly unstated policy passes."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "pass",
+          "evidence": "Labels 'good first issue'/'Easy to Fix'/'typing', and oscarbenjamin repeatedly names concrete files and verification steps (mypy, pyright --verifytypes, SupportsIndex)."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-06",
+      "verdict": "accept",
+      "failed_checks": [],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits (2026-07-13/14) human-authored by abubakr-itqan, within 90 days of 2026-08-05 capture."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push 2026-07-31, within 180 days of capture despite no published release."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Single fix: Submit App button visible on desktop + functional on mobile drawer, with scoped 'Where to start' file pointers."
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "assignees: none; linked PRs: none; 0 comments \u2014 no claim exists."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "CONTRIBUTING.md: no statement on AI or contribution tooling \u2014 unstated policy passes."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "pass",
+          "evidence": "Labeled 'good first issue' with COLLABORATOR-authored 'Where to start' section naming src/app/components/header/ and src/app/components/mobile-menu/."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-07",
+      "verdict": "reject",
+      "failed_checks": [
+        "Maintainer activity",
+        "Repository in use",
+        "Maintainer guidance"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "fail",
+          "evidence": "Most recent default-branch commits are 2025-02-10 (README updates); maintainer first-response sample shows 'no maintainer comment' on all 5 sampled issues, and this issue has 0 comments \u2014 nothing within 90 days of the 2026-08-05 capture."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "fail",
+          "evidence": "latest release: none published; last push to any branch: 2025-02-27, ~524 days before the 2026-08-05 capture date, exceeding the 180-day window."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Issue describes one identifiable bug: AttributeError in the get_ith_path lambda when jumping to underscore-containing directory names, with repro steps and root cause named."
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "Repo facts: assignees: none; linked PRs: none; comments: 0 total \u2014 no claim or competing PR exists."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "Repo facts: 'no CONTRIBUTING.md in the repo; no stated policy' \u2014 an unstated policy passes per rubric."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "fail",
+          "evidence": "labels: none; issue thread has 0 comments, so no maintainer comment or good-first-issue label identifies the change."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-08",
+      "verdict": "reject",
+      "failed_checks": [
+        "Available to work"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits (2026-07-14 to 2026-08-03) are human-authored: amanagr, PieterCK, sathwikshetty33."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push to any branch 2026-08-04, 1 day before the 2026-08-05 capture date."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Issue requests one identifiable change ('migrate compose and message-edit banners to the modern banner component'), pursued incrementally per amanagr's confirmed plan ('Should this be done incrementally... Yeah, that sounds fine'), not an explicitly labeled umbrella/tracking issue."
+        },
+        {
+          "name": "Available to work",
+          "grade": "fail",
+          "evidence": "Assignee piyushagarwal-55 with an open linked PR #39811 ('Opened a draft PR (#39811) for the first banner'), still open as of the 2026-08-03 zulipbot inactivity-warning comment with no withdrawal recorded."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "CONTRIBUTING.md 'AI use policy and guidelines': AI tools allowed, with personal-understanding/testing/explainability obligations and no outright ban."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "pass",
+          "evidence": "Labels include 'good first issue' and 'help wanted'; maintainer amanagr commented guiding the incremental approach and PR/design-discussion process."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-09",
+      "verdict": "accept",
+      "failed_checks": [],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits (2026-08-04, e.g. danyeaw, codewithdaniel1) are human-authored and within 90 days of the 2026-08-05 capture."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push 2026-08-04 and latest release 26.7.0 (2026-07-31), both within 180 days of capture."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Single requested feature (a `conda config --clear` option); only one closed linked PR (#11627) exists, not the \u22652 closed unmerged attempts needed to reject despite the 2018 issue age."
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "No assignees; linked PR #11627 is closed/unmerged so doesn't count as active; MesaJonathan's 2022-01-20 claim has no progress in the 30 days before capture, so it's not an active claim."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "CONTRIBUTING.md 'Generative AI' section welcomes AI-assisted contributions, with obligation that contributor reviews/understands AI-generated content before submitting."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "pass",
+          "evidence": "Labeled 'good first issue'; jakirkham (MEMBER) commented confirming the contributor could just try implementing it."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-10",
+      "verdict": "reject",
+      "failed_checks": [
+        "Bounded contribution"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits include human authors (IMHOJEONG, Managor, Gauravtiwari31) dated 2026-08-04/05, within 90 days of 2026-08-05 capture."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push to any branch is 2026-08-05, the same day as capture."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "fail",
+          "evidence": "Issue titled 'Documentation request megaissue' listing 100+ independently numbered linked page-request issues, an explicit umbrella/tracking issue with independently scoped subprojects."
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "No assignees; sole claim (estershuli, 2026-02-12) is stale with no progress shown, and June comments are generic help requests, not active claims."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "CONTRIBUTING.md discourages generative AI for new pages and closes PRs suspected of unreviewed AI/machine-translation content \u2014 a human-review obligation, not an explicit ban, per rubric carve-out."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "pass",
+          "evidence": "Labeled 'good first issue' and 'help wanted'; MEMBER Managor's comment points to the style guide and CONTRIBUTING.md as starting points."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-11",
+      "verdict": "accept",
+      "failed_checks": [
+        "Maintainer guidance"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits (2026-08-04) authored by humans RazinShaikh and 96-LB, including merged PRs #521, #554, #551."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push to any branch was 2026-08-04, one day before capture (2026-08-05), well within 180 days."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Issue describes one identifiable bug: 'the rewrite sometimes applies multiple times when clicked on the sidebar,' labeled 'Type: bug' \u2014 a single fix, not an umbrella."
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "Repo facts state 'assignees: none; linked PRs: none' and the comment thread is empty (0 total) \u2014 no claim, no open PR, no assignee."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "CONTRIBUTING.md: 'no statement on AI or contribution tooling' \u2014 an explicitly unstated policy passes per the rubric."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "fail",
+          "evidence": "Labels are 'Type: bug, Category: Proof mode, Priority: Medium' (no good-first-issue label) and there are 0 comments, so no maintainer comment identifies a file or verification step."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-12",
+      "verdict": "reject",
+      "failed_checks": [
+        "AI contribution policy"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "2026-08-11 by Patrick Childers: fix inverted hidden logic for interact event \u2014 human-authored default-branch commit within 90 days of capture"
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "last push to any branch: 2026-08-12, same day as capture; not archived"
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Single feature request to include in-progress books in the reading-goal progress bar; linked PRs: none, so the >=2 closed-unmerged-attempts exclusion does not apply"
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "assignees: none; linked PRs: none; jrings' 2024-09-19 claim has no progress in the 30 days before the 2026-08-12 capture"
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "fail",
+          "evidence": "CONTRIBUTING.md 'Generative AI' section: 'We do not accept AI-generated code or documentation.'"
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "pass",
+          "evidence": "mouse-reeve (MEMBER): 'You could definitely create one with html and css (we use the bulma css library), as long as it's screen-reader accessible.'"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-13",
+      "verdict": "reject",
+      "failed_checks": [
+        "Available to work"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits include kubernetes-prow[bot] merges of human-authored PRs (e.g. 'Merge pull request #23409 from a4abdul7/docs-wsl2-access'), and #23385 shows a 0.0-day maintainer response."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push to any branch was 2026-08-03, one day before capture (2026-08-05), well within 180 days."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Issue requests one identifiable fix \u2014 replacing spaces with tabs in four named nerdctl-bin package files \u2014 not an umbrella or architecture change."
+        },
+        {
+          "name": "Available to work",
+          "grade": "fail",
+          "evidence": "Repo facts list two open linked PRs for this issue \u2014 'linked PRs: kubernetes/minikube#23438 (open); kubernetes/minikube#23439 (open)' \u2014 indicating the requested fix already has open PR(s) implementing it."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "Contribution policy (CONTRIBUTING.md): 'no statement on AI or contribution tooling' \u2014 explicitly unstated policy passes."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "pass",
+          "evidence": "Labeled 'good first issue' and the COLLABORATOR-authored issue body names the exact four files and lines to fix."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-14",
+      "verdict": "accept",
+      "failed_checks": [],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits (2026-08-01 to 2026-08-05) are all human-authored (SaifAlYounan, sergiomaldo)."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push to any branch is 2026-08-05, same day as capture."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Six files edited but all are one coordinated documentation change (removing dead Discord references), matching the rubric's multi-page-same-feature carve-out."
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "Assignees: none; linked PRs: none; comments: 0 total (no comments)."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "contribution policy (CONTRIBUTING.md): no statement on AI or contribution tooling \u2014 explicitly unstated policy passes."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "pass",
+          "evidence": "Issue carries label 'good first issue' and enumerates exact files/lines and a verification grep command."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-15",
+      "verdict": "reject",
+      "failed_checks": [
+        "Bounded contribution",
+        "Available to work"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits include human authors amanagr, PieterCK, sathwikshetty33 dated 2026-07-14 to 2026-08-03, within 90 days of the 2026-08-05 capture."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push to any branch was 2026-08-04, 1 day before capture."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "fail",
+          "evidence": "Issue opened 2021-08-18 (>730 days before the 2026-08-05 capture) with two closed unmerged linked PRs (#20840, #23123), matching the rubric's explicit reject condition."
+        },
+        {
+          "name": "Available to work",
+          "grade": "unclear",
+          "evidence": "Repo facts show assignees: none, but the bundle shows only 40 of 97 comments, leaving the most recent ~57 comments before the 2026-08-05 capture unseen, so a recent unwithdrawn claim cannot be ruled out."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "CONTRIBUTING.md AI use policy permits AI tools, requiring the contributor to personally understand, test, and explain every change; no ban."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "pass",
+          "evidence": "Issue carries the 'good first issue' label."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-16",
+      "verdict": "accept",
+      "failed_checks": [
+        "Maintainer guidance"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits (all 2026-08-04) are human-authored (codewithdaniel1, danyeaw), within 90 days."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push 2026-08-04 and latest release 26.7.0 (2026-07-31) both within 180 days."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Issue describes one bug: channel notices printed as raw text on stderr break JSON parsing and are omitted from --json output; no umbrella/tracking language or core-architecture change requested."
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "Repo facts: 'assignees: none; linked PRs: none'; comments section: '(no comments)' \u2014 no claim or open PR exists."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "CONTRIBUTING.md 'Generative AI' section welcomes AI tools; contributor must review/understand AI-generated content before including it in a PR (obligation, not a ban)."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "fail",
+          "evidence": "Only label is 'type::bug' (no good-first-issue label) and there are 0 comments, so no maintainer comment identifies a file or verification step."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-17",
+      "verdict": "reject",
+      "failed_checks": [
+        "Maintainer activity",
+        "Repository in use"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "fail",
+          "evidence": "Last default-branch commit 2021-11-13; candidate thread has 0 comments; no human activity within 90 days of 2026-08-05 capture date."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "fail",
+          "evidence": "Repo facts: archived: yes."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Single bug: video search (-V) returns no results due to a Google video-result format change, likely a parser fix."
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "Assignees: none; linked PRs: none; 0 comments in thread means no active claim."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "Repo facts: no CONTRIBUTING.md; no stated policy \u2014 explicitly unstated policy passes."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "pass",
+          "evidence": "Issue body by OWNER jarun points to the parser as the likely area needing a fix and includes a debug response file."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-18",
+      "verdict": "reject",
+      "failed_checks": [
+        "Available to work"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits (2026-08-04) all human-authored: dwelle, yanrin13, nihaarsirikonda"
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "last push to any branch: 2026-08-04, one day before the 2026-08-05 capture; not archived"
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "dwelle: 'Yep, let's do this (not showing the line option)' \u2014 single agreed-upon small UI fix"
+        },
+        {
+          "name": "Available to work",
+          "grade": "fail",
+          "evidence": "Linked PRs #9685, #10371, #11656, and LennyMalcolm0/excalidraw#314 are all open; plus vishnukumar650 posted an unwithdrawn claim on 2026-08-02, 3 days before capture"
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "contribution policy (CONTRIBUTING.md): 'no statement on AI or contribution tooling'"
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "pass",
+          "evidence": "labels: good first issue; dwelle identifies the exact change: 'not showing the line option'"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-19",
+      "verdict": "reject",
+      "failed_checks": [
+        "Bounded contribution"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits (2026-08-04) all human-authored: RazinShaikh, 96-LB."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push 2026-08-04, one day before the 2026-08-05 capture."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "fail",
+          "evidence": "Issue lists two root causes 'which should be fixed' plus three additional distinct suggested fixes (multi-processing, selective category matching, separate rewrite-application thread) \u2014 multiple independently scoped, unresolved design approaches rather than one bounded fix."
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "assignees: none; linked PRs: none; 0 comments, no claims present."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "'contribution policy (CONTRIBUTING.md): no statement on AI or contribution tooling' \u2014 explicitly unstated policy passes."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "pass",
+          "evidence": "Issue authored by RazinShaikh (COLLABORATOR), body identifies specific causes and concrete suggested approaches."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-20",
+      "verdict": "accept",
+      "failed_checks": [
+        "Maintainer guidance"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits (2026-08-04) authored by humans (dwelle, yanrin13, nihaarsirikonda), within 90 days."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Not archived; last push to any branch 2026-08-04, within 180 days."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Single identifiable feature request (new toolbar logo shape) with custom-upload/branding explicitly out of scope for v1; no umbrella/competing-design/core-architecture language."
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "\"assignees: none; linked PRs: none\" and 0 comments \u2014 no claim or open PR."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "\"contribution policy (CONTRIBUTING.md): no statement on AI or contribution tooling\" \u2014 explicitly unstated policy passes."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "fail",
+          "evidence": "labels: none; issue opened by cursor[bot] (NONE) with 0 comments \u2014 no maintainer comment identifying scope/file/verification."
+        }
+      ],
+      "error": null
+    }
+  ]
+}

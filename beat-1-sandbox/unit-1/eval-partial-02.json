@@ -1,0 +1,92 @@
+{
+  "rubric": "C:\\Users\\samyo\\.claude\\skills\\issue-select\\rubric.md",
+  "model": "sonnet",
+  "agreement": [
+    2,
+    2
+  ],
+  "results": [
+    {
+      "id": "issue-01",
+      "verdict": "accept",
+      "failed_checks": [
+        "Maintainer guidance"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits (2026-08-04) are human-authored merges by codewithdaniel1 and danyeaw, e.g. 'docs: add authenticated channels guide (#16483)'."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "pass",
+          "evidence": "Repo not archived; last push 2026-08-04, one day before the 2026-08-05 capture date."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "All requested edits (new task page plus coordinated updates to manage-pkgs.rst, pip-interoperability.rst, new-features.md) describe one feature (GA conda-pypi workflow), matching the rubric's 'coordinated edits to multiple documentation pages describing the same feature count as one bounded contribution' exception."
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "Repo facts: 'this issue: assignees: none; linked PRs: none'; comment thread shows '0 total, first 0 shown' \u2014 no claims to evaluate."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "CONTRIBUTING.md 'Generative AI' section: 'generative AI tools welcome; you are responsible for all contributions and must review and understand AI-generated content before including it in a pull request' \u2014 no ban, disclosure/review obligations apply."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "unclear",
+          "evidence": "Only label is 'type::documentation' (no good-first-issue label); issue opened by a CONTRIBUTOR with 0 comments, so no maintainer comment identifies a file or verification step."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-07",
+      "verdict": "reject",
+      "failed_checks": [
+        "Maintainer activity",
+        "Repository in use",
+        "Maintainer guidance"
+      ],
+      "checks": [
+        {
+          "name": "Maintainer activity",
+          "grade": "fail",
+          "evidence": "Most recent default-branch commit is 2025-02-10 and maintainer first-response sample shows no OWNER/MEMBER/COLLABORATOR reply in any of 5 recent issues \u2014 no activity within 90 days of the 2026-08-05 capture."
+        },
+        {
+          "name": "Repository in use",
+          "grade": "fail",
+          "evidence": "No published release and last push to any branch was 2025-02-27, ~525 days before the 2026-08-05 capture \u2014 outside the 180-day window."
+        },
+        {
+          "name": "Bounded contribution",
+          "grade": "pass",
+          "evidence": "Single identifiable bug: get_ith_path lambda crashes with AttributeError when last(take(i, iterable)) returns None; issue opened 2026-02-28, well under 730 days old."
+        },
+        {
+          "name": "Available to work",
+          "grade": "pass",
+          "evidence": "Repo facts: assignees: none; linked PRs: none; thread has 0 comments, so no claim exists."
+        },
+        {
+          "name": "AI contribution policy",
+          "grade": "pass",
+          "evidence": "Repo facts: 'no CONTRIBUTING.md in the repo; no stated policy' \u2014 explicitly unstated policy passes."
+        },
+        {
+          "name": "Maintainer guidance",
+          "grade": "fail",
+          "evidence": "Issue has labels: none and 0 comments, so no maintainer identified a fix, file, or verification step."
+        }
+      ],
+      "error": null
+    }
+  ]
+}

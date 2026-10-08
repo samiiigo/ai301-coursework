@@ -1,0 +1,14 @@
+npm notice run pathreview-frontend@0.1.0 build
+npm notice run tsc && vite build
+vite v5.4.21 building for production...
+transforming...
+✓ 1380 modules transformed.
+[plugin:vite:reporter] [plugin vite:reporter] 
+(!) D:/repo/codepath/pathreview-ai301-fa26-s3/frontend/src/services/api.ts is dynamically imported by D:/repo/codepath/pathreview-ai301-fa26-s3/frontend/src/context/AuthContext.tsx, D:/repo/codepath/pathreview-ai301-fa26-s3/frontend/src/context/AuthContext.tsx but also statically imported by D:/repo/codepath/pathreview-ai301-fa26-s3/frontend/src/hooks/useProfileSubmit.ts, D:/repo/codepath/pathreview-ai301-fa26-s3/frontend/src/hooks/useReviewStatus.ts, D:/repo/codepath/pathreview-ai301-fa26-s3/frontend/src/pages/DashboardPage.tsx, D:/repo/codepath/pathreview-ai301-fa26-s3/frontend/src/pages/NewProfilePage.tsx, D:/repo/codepath/pathreview-ai301-fa26-s3/frontend/src/pages/ReviewHistoryPage.tsx, D:/repo/codepath/pathreview-ai301-fa26-s3/frontend/src/pages/ReviewPage.tsx, dynamic import will not move module into another chunk.
+
+rendering chunks...
+computing gzip size...
+dist/index.html                   0.56 kB │ gzip:  0.35 kB
+dist/assets/index-CFH3XUSf.css    0.35 kB │ gzip:  0.25 kB
+dist/assets/index-D_WiiS4v.js   203.10 kB │ gzip: 62.37 kB
+✓ built in 9.95s

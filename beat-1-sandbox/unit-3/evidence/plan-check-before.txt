@@ -1,0 +1,41 @@
+## Grading Summary — Issue #40 (Add "Copy link" button for public review summary)
+
+**Scope check:** Issue is in `codepath/pathreview-ai301-fa26-s3`, matching the configured scope. In scope.
+
+**Evidence gathered:**
+- Issue body: generate read-only shareable link, no login required, expires after 30 days. Relevant files: `ReviewPage.tsx`, `shareService.ts`, `api/routes/reviews.py`.
+- Repro comment (student's own, posted 2026-10-01): Share button copies `window.location.href` (the plain `/reviews/<id>` URL); `/reviews/:reviewId` is wrapped in `ProtectedRoute`; `shareService.ts` doesn't exist; `reviews.py` has no public/token endpoint; 30-day expiry couldn't be tested because no share mechanism exists at all.
+- Confirmed against the live repo: `api/routes/reviews.py`, `api/schemas/review.py`, `core/services/review_service.py`, `frontend/src/App.tsx`, `frontend/src/pages/ReviewPage.tsx` all exist as named; `core/security.py` already has generic `create_access_token`/`decode_access_token` JWT helpers (arbitrary claims + `exp`), supporting the plan's claim that a purpose-claim share token is feasible without new infra. `ProtectedRoute` usage confirmed in `App.tsx`.
+- `docs/CONTRIBUTING.md`: branch format `<type>/<issue-number>-<slug>`, no AI-disclosure policy stated.
+
+**Checks:**
+
+| Check | Grade | Deciding evidence |
+|---|---|---|
+| diagnosis-grounded | pass | Plan quotes the repro's exact findings (`window.location.href`, `ProtectedRoute`, missing `shareService.ts`, no public endpoint) and the conclusion follows directly from them. |
+| cause-targeted | pass | Plan replaces the mechanism (adds token-backed public endpoint + unprotected route + new Share behavior) rather than patching the symptom; traces cleanly from "no share mechanism exists" to "add one." |
+| scope-bounded | pass | Explicit in/out-of-scope lists; excludes revocation, custom expiry, analytics, redesign; new files (`share_service.py`, `shareService.ts`, `SharedReviewPage.tsx`) are all directly required by the issue. |
+| executable | pass | Concrete file list and step-by-step data flow (token creation → purpose/expiry claims → public validation → frontend service → new route), verified to align with real repo structure and existing JWT helper signatures. |
+| test-proves-fix | pass | Re-runs the exact Unit 2 Incognito repro as before/after check, and adds the 30-day expiry/invalid-token coverage the repro explicitly couldn't test — the issue's key boundary behavior. |
+| uncertainty-honest | pass | Named open risks (token-purpose isolation, undetermined error-status convention, possible persistence requirement) and a Deviations placeholder with explicit instructions to fill in post-build rather than silently presenting as done. |
+| thread-and-conventions | pass | Comment is specific to this issue/repro (cites exact URL, commit, file findings), not piggybacked (thread has no other student's plan), and branch name `fix/40-public-review-links` matches CONTRIBUTING.md's convention. No AI-disclosure policy exists to violate. |
+
+**Voice-guide notes (live mode):** No violations found — the draft comment shows the run (commit, exact copied URL, exact behavior), states remaining uncertainty plainly ("still need to confirm the best invalid-link status convention"), and makes no ETA/assignment request or unearned claims.
+
+All seven required checks pass, so per the verdict rule this accepts.
+
+```json
+{
+  "item": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/40",
+  "checks": [
+    {"name": "diagnosis-grounded", "grade": "pass", "evidence": "Plan quotes repro facts verbatim (window.location.href copy, ProtectedRoute wrapping, missing shareService.ts, no token endpoint) and the stated cause follows directly from them."},
+    {"name": "cause-targeted", "grade": "pass", "evidence": "Plan adds a signed share-token endpoint + unauthenticated validation + new unprotected route, replacing the missing mechanism rather than masking the redirect-to-login symptom."},
+    {"name": "scope-bounded", "grade": "pass", "evidence": "Out-of-scope list excludes revocation/custom-expiry/analytics/redesign; every new file (share_service.py, shareService.ts, SharedReviewPage.tsx) is required by the issue's stated behavior."},
+    {"name": "executable", "grade": "pass", "evidence": "Named files (api/routes/reviews.py, core/services/review_service.py, core/security.py-style JWT helpers, frontend/src/App.tsx) verified to exist in repo and fit the described data flow with no invented core design left to a stranger."},
+    {"name": "test-proves-fix", "grade": "pass", "evidence": "Test plan re-runs the exact Unit 2 Incognito repro as before/after check and adds expiry/invalid-token/wrong-purpose coverage, the exact boundary the repro comment said it could not test."},
+    {"name": "uncertainty-honest", "grade": "pass", "evidence": "Risks section names unresolved token-isolation and HTTP-status-convention questions; Deviations section is an explicit to-be-filled placeholder rather than a hidden claim of completeness."},
+    {"name": "thread-and-conventions", "grade": "pass", "evidence": "Comment cites the student's own repro URL/commit, thread has no other student's plan to piggyback on, and branch name fix/40-public-review-links matches CONTRIBUTING.md's <type>/<issue-number>-<slug> convention."}
+  ],
+  "verdict": "accept"
+}
+```

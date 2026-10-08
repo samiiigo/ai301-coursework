@@ -1,0 +1,58 @@
+FF.FFF........F                                                          [100%]
+================================== FAILURES ===================================
+______ test_owner_can_create_link_and_anonymous_reader_gets_only_summary ______
+tests\unit\test_review_sharing.py:54: in test_owner_can_create_link_and_anonymous_reader_gets_only_summary
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+_____________________ test_share_creation_requires_login ______________________
+tests\unit\test_review_sharing.py:70: in test_share_creation_requires_login
+    assert sharing.client.post(f"/reviews/{sharing.review.id}/share").status_code == 401
+E   AssertionError: assert 404 == 401
+E    +  where 404 = <Response [404 Not Found]>.status_code
+E    +    where <Response [404 Not Found]> = post('/reviews/f4519405-1f70-40b8-a364-bbcf8da1cfcb/share')
+E    +      where post = <starlette.testclient.TestClient object at 0x000002A3DD051F90>.post
+E    +        where <starlette.testclient.TestClient object at 0x000002A3DD051F90> = namespace(app=<fastapi.applications.FastAPI object at 0x000002A3DD059E80>, client=<starlette.testclient.TestClient obj...d='2902811054768'>), result=<Mock id='2902810295136'>, user=namespace(id=UUID('ab22201a-e459-4974-af16-6db42568f263'))).client
+______________ test_only_complete_reviews_can_be_shared[pending] ______________
+tests\unit\test_review_sharing.py:82: in test_only_complete_reviews_can_be_shared
+    assert sharing.client.post(f"/reviews/{sharing.review.id}/share").status_code == 409
+E   AssertionError: assert 404 == 409
+E    +  where 404 = <Response [404 Not Found]>.status_code
+E    +    where <Response [404 Not Found]> = post('/reviews/a5921aa5-543a-4559-a24d-283b64ba862a/share')
+E    +      where post = <starlette.testclient.TestClient object at 0x000002A3DD05DBA0>.post
+E    +        where <starlette.testclient.TestClient object at 0x000002A3DD05DBA0> = namespace(app=<fastapi.applications.FastAPI object at 0x000002A3DD05B0E0>, client=<starlette.testclient.TestClient obj...d='2902811061824'>), result=<Mock id='2902811058464'>, user=namespace(id=UUID('eea1f59d-605c-47cc-971c-69f64a17f61c'))).client
+____________ test_only_complete_reviews_can_be_shared[processing] _____________
+tests\unit\test_review_sharing.py:82: in test_only_complete_reviews_can_be_shared
+    assert sharing.client.post(f"/reviews/{sharing.review.id}/share").status_code == 409
+E   AssertionError: assert 404 == 409
+E    +  where 404 = <Response [404 Not Found]>.status_code
+E    +    where <Response [404 Not Found]> = post('/reviews/da7d466d-5d5d-4139-bc00-1387717dc16e/share')
+E    +      where post = <starlette.testclient.TestClient object at 0x000002A3DD05F230>.post
+E    +        where <starlette.testclient.TestClient object at 0x000002A3DD05F230> = namespace(app=<fastapi.applications.FastAPI object at 0x000002A3DD05A270>, client=<starlette.testclient.TestClient obj...d='2902811059136'>), result=<Mock id='2902811060480'>, user=namespace(id=UUID('fcb37edd-7ec5-45ce-bd38-697b71c17272'))).client
+______________ test_only_complete_reviews_can_be_shared[failed] _______________
+tests\unit\test_review_sharing.py:82: in test_only_complete_reviews_can_be_shared
+    assert sharing.client.post(f"/reviews/{sharing.review.id}/share").status_code == 409
+E   AssertionError: assert 404 == 409
+E    +  where 404 = <Response [404 Not Found]>.status_code
+E    +    where <Response [404 Not Found]> = post('/reviews/0d25163d-eceb-4ee6-9fc4-9e00c878982f/share')
+E    +      where post = <starlette.testclient.TestClient object at 0x000002A3DD1705F0>.post
+E    +        where <starlette.testclient.TestClient object at 0x000002A3DD1705F0> = namespace(app=<fastapi.applications.FastAPI object at 0x000002A3DD05BA10>, client=<starlette.testclient.TestClient obj...d='2902811064176'>), result=<Mock id='2902811062832'>, user=namespace(id=UUID('5dda6a05-3e88-4aa0-a73b-5d28c31853c8'))).client
+____ test_share_token_cannot_authenticate_and_owner_route_stays_protected _____
+tests\unit\test_review_sharing.py:118: in test_share_token_cannot_authenticate_and_owner_route_stays_protected
+    assert response.status_code == 200
+E   assert 404 == 200
+E    +  where 404 = <Response [404 Not Found]>.status_code
+============================== warnings summary ===============================
+core\config.py:7
+  D:\repo\codepath\pathreview-ai301-fa26-s3\core\config.py:7: PydanticDeprecatedSince20: Support for class-based `config` is deprecated, use ConfigDict instead. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.13/migration/
+    class Settings(BaseSettings):
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=========================== short test summary info ===========================
+FAILED tests/unit/test_review_sharing.py::test_owner_can_create_link_and_anonymous_reader_gets_only_summary
+FAILED tests/unit/test_review_sharing.py::test_share_creation_requires_login
+FAILED tests/unit/test_review_sharing.py::test_only_complete_reviews_can_be_shared[pending]
+FAILED tests/unit/test_review_sharing.py::test_only_complete_reviews_can_be_shared[processing]
+FAILED tests/unit/test_review_sharing.py::test_only_complete_reviews_can_be_shared[failed]
+FAILED tests/unit/test_review_sharing.py::test_share_token_cannot_authenticate_and_owner_route_stays_protected
+6 failed, 9 passed, 1 warning in 3.51s

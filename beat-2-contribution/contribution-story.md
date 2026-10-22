@@ -55,10 +55,9 @@ happened; these entries are the toolkit's own timeline.
 All four entries are graded. Keep every heading below, and fill each
 one in the week it belongs to.
 
-**Unit 5: [one line on the tool work]**
+**Unit 5: Building issue-scout and authoring a GitHub search strategy**
 
-[2-4 sentences: what you built (the scout, your strategy), what broke
-or fell short, what changed because of it.]
+I adapted my Unit 1 rubric into the issue-scout skill, updated my fit profile in scope.md, and authored a search strategy using `gh search issues` with cost-free ranking filters. On the first scan, the Python queries surfaced a tight cluster of template-like CLI issues that dominated the top five with duplicate candidates from the same repository and crowded out my preference for frontend and UI work. In response, I added a ranking filter to enforce at most one candidate per repository and added a targeted TypeScript query to ensure a balanced, diverse flow of web application candidates.
 
 **Unit 6: [one line on the tool work]**
 
